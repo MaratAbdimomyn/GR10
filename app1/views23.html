@@ -1,0 +1,10 @@
+def plus_id(request):
+    items23 = Town.objects.all()
+    context = {'items23':items23}
+    d = Town.objects.create(id=4)
+    for i in range(2):
+        d.c_name = d.c_name + str(d.c_aeroport_index)
+        return d.c_name
+    return render(request, plus_id.html, context)
+
+    

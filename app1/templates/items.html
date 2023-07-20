@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Items</h1>
+    <ul style="display: flex; flex-direction: row; list-style-type: none;">
+        <li style="margin-right: 40px;">ID</li>
+        <li style="margin-right: 40px;">Name</li>
+        <li style="margin-right: 40px;">Aeroport index</li>
+        <li style="margin-right: 40px;">Car number</li>
+    </ul>
+    {% for i in items %}
+    <ul style="display: flex; flex-direction: row; list-style-type: none;">
+        <li style="margin-right: 40px;">{{ i.id }}</li>
+        <li style="margin-right: 80px;">{{ i.c_name }}</li>
+        <li style="margin-right: 80px;">{{ i.c_aeroport_index }}</li>
+        <li>{{ i.c_car_number }}</li>
+    </ul>
+    {% endfor %}
+
+    <a href="/">Домашняя страница</a>
+    <a href="/updated">Добавить новые объекты в список</a>
+</body>
+
+</html>
